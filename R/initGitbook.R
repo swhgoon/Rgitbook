@@ -36,7 +36,7 @@ initGitbook <- function(dir=getwd()) {
 		
 		#if the knitsetup block isn't already in the file, then add it
 		suppressWarnings(
-			if(grepl("r knitsetup.+\n", lines)) {
+			if(grepl("r knitsetup|r setup", lines)) {
 				lines <- c(knitr.header, lines)
 			}
 		)
